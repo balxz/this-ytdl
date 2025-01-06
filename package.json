@@ -1,0 +1,16 @@
+{
+  "name": "@balxz/this-ytdl",
+  "version": "1.2.3",
+  "description": "Youtube Downloader With Api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [],
+  "author": "bálzz",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "latest",
+    "yt-search": "latest"
+  }
+}
