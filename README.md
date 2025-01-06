@@ -17,19 +17,19 @@ npm i balxz/this-ytdl
 ## Usage
 
 ```Javascript
-const { search, ytmp3, ytmp4 } = require("balxz/this-ytdl")
+const { search, ytmp3, ytmp4 } = require("@balxz/this-ytdl")
 ```
 
 ## Quality Available
 
 ```Javascript
-const video = ["144", "360", "480", "720", "1080"]
-const audio = ["92", "128", "256", "320"]
+["144", "360", "480", "720", "1080"]
+["92", "128", "256", "320"]
 ```
 ## Download With Audio (MP3)
 
 ```Javascript
-const { search, ytmp3, ytmp4 } = require("balxz/this-ytdl")
+const { search, ytmp3, ytmp4 } = require("@balxz/this-ytdl")
 let a = ytmp3("https://youtube.com/watch?v=07qofDUkU3s").then(v => v.data)
 console.log(a)
 ```
@@ -77,7 +77,7 @@ console.log(a)
 ## Download With Video (MP4) 
 
 ```Javascript
-const { search, ytmp3, ytmp4 } = require("balxz/this-ytdl")
+const { search, ytmp3, ytmp4 } = require("@balxz/this-ytdl")
 let a = ytmp4("https://youtube.com/watch?v=07qofDUkU3s").then(v => v.data)
 console.log(a)
 ```
@@ -117,7 +117,7 @@ console.log(a)
 ## Search Video With This Package
 
 ```Javascript
-const { search, ytmp3, ytmp4 } = require("balxz/this-ytdl")
+const { search, ytmp3, ytmp4 } = require("@balxz/this-ytdl")
 
 let a = search("Anti ∞ Hero").then(v => v.data)
 console.log(a)
@@ -530,3 +530,7 @@ console.log(a)
   ]
 }
 ```
+
+
+
+Sekian. Yth bálzz.
