@@ -47,7 +47,8 @@ npm i balxz/this-ytdl
     "url": "string",
     "filename": "string"
   }
-}```
+}
+```
 
 ## Usage
 
