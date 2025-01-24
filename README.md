@@ -17,14 +17,14 @@ npm i balxz/this-ytdl
 ## Usage
 
 ```Javascript
-const { yts, ytmp3, ytmp4 } = require("@balxz/this-ytdl")
+const { yts, ytmp3, ytmp4 } = require("@balxz/this-ytdl").default
 ```
 
 ## Download With Audio (MP3)
 
 ```Javascript
-const { yts, ytmp3, ytmp4 } = require("@balxz/this-ytdl")
-let a = ytmp3("https://youtube.com/watch?v=07qofDUkU3s").then(v => v.data)
+const { yts, ytmp3, ytmp4 } = require("@balxz/this-ytdl").default
+let a = ytmp3("https://youtube.com/watch?v=EKexKBA2lRg").then(v => v.data)
 console.log(a)
 ```
 ## Result Data
@@ -50,8 +50,8 @@ console.log(a)
 ## Download With Video (MP4) 
 
 ```Javascript
-const { yts, ytmp3, ytmp4 } = require("@balxz/this-ytdl")
-let a = ytmp4("https://youtube.com/watch?v=07qofDUkU3s").then(v => v.data)
+const { yts, ytmp3, ytmp4 } = require("@balxz/this-ytdl").default
+let a = ytmp4("https://youtube.com/watch?v=EKexKBA2lRg").then(v => v.data)
 console.log(a)
 ```
 ## Result Data
@@ -77,7 +77,7 @@ console.log(a)
 ## Search Video With This Package
 
 ```Javascript
-const { yts, ytmp3, ytmp4 } = require("@balxz/this-ytdl")
+const { yts, ytmp3, ytmp4 } = require("@balxz/this-ytdl").default
 
 let a = yts("Anti ∞ Hero").then(v => v.data)
 console.log(a)
