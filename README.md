@@ -28,7 +28,7 @@ let a = ytmp3("https://youtube.com/watch?v=07qofDUkU3s").then(v => v.data)
 console.log(a)
 ```
 ## Result Data
-```JSON
+```javascript
 {
   status: true,
   message: 'Success',
@@ -55,7 +55,7 @@ let a = ytmp4("https://youtube.com/watch?v=07qofDUkU3s").then(v => v.data)
 console.log(a)
 ```
 ## Result Data
-```JSON
+```javascript
 {
   status: true,
   message: 'Success',
@@ -83,7 +83,7 @@ let a = yts("Anti ∞ Hero").then(v => v.data)
 console.log(a)
 ```
 ## Result Data
-```JSON
+```javascript
 {
   status: true,
   message: 'Success',
