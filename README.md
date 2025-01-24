@@ -14,6 +14,11 @@ You can install the package using github:
 npm i balxz/this-ytdl
 ```
 
+How To Update?
+```bash
+npm update @balxz/this-ytdl
+```
+
 ## Usage
 
 ```Javascript
@@ -24,7 +29,7 @@ const { yts, ytmp3, ytmp4 } = require("@balxz/this-ytdl").default
 
 ```Javascript
 const { yts, ytmp3, ytmp4 } = require("@balxz/this-ytdl").default
-let a = ytmp3("https://youtube.com/watch?v=EKexKBA2lRg").then(v => v.data)
+let a = await ytmp3("https://youtube.com/watch?v=EKexKBA2lRg").then(v => v.data)
 console.log(a)
 ```
 ## Result Data
@@ -51,7 +56,7 @@ console.log(a)
 
 ```Javascript
 const { yts, ytmp3, ytmp4 } = require("@balxz/this-ytdl").default
-let a = ytmp4("https://youtube.com/watch?v=EKexKBA2lRg").then(v => v.data)
+let a = await ytmp4("https://youtube.com/watch?v=EKexKBA2lRg").then(v => v.data)
 console.log(a)
 ```
 ## Result Data
@@ -79,7 +84,7 @@ console.log(a)
 ```Javascript
 const { yts, ytmp3, ytmp4 } = require("@balxz/this-ytdl").default
 
-let a = yts("Anti ∞ Hero").then(v => v.data)
+let a = await yts("Anti ∞ Hero").then(v => v.data)
 console.log(a)
 ```
 ## Result Data
