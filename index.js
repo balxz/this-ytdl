@@ -1,5 +1,5 @@
 import axios from "axios"
-export default async function ytmp3(urls) {
+async function ytmp3(urls) {
         const response = await axios.get("https://y2ts.us.kg/token")
         const token = response.data.token
         const url = `https://y2ts.us.kg/youtube?url=${urls}`
@@ -12,4 +12,5 @@ export default async function ytmp3(urls) {
         const videoResponse = await axios.get(url, { headers })
         return videoResponse.data.result
 }
+export default { ytmp3 }
 //return dansyaytdl("https://youtu.be/9MYRSg2VPsk?si=IuuO5LK3XG3l-Qb-")
