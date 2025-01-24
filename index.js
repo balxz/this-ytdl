@@ -1,6 +1,7 @@
 import axios from "axios"
+import search from "yt-search"
 
-export const ytmp3 = async (urls) => {
+export const ytmp3 = async(urls) => {
   try {
     const response = await axios.get("https://y2ts.us.kg/token")
     const token = response.data.token
@@ -39,4 +40,36 @@ export const ytmp3 = async (urls) => {
   }
 }
 
-//return ytmp3("https://youtu.be/9MYRSg2VPsk?si=IuuO5LK3XG3l-Qb-")
+export const yts = async(query) => {
+  try{
+        let res = await search(query)
+        let vi = res.videos
+        
+        if (vi.length > 0) {
+            let ri = Math.floor(Math.random() * vi.length)
+            let rv = vi[ri]
+            return {
+                status: true,
+                message: "Success",
+                owner: "bálxzzy — SH",
+                data: {
+                    id: rv.videoId,
+                    title: rv.title,
+                    desc: rv.description,
+                    imej: rv.image,
+                    thumb: rv.thumbnail,
+                    uploadTime: rv.ago,
+                    views: rv.views,
+                    author: rv.author.name,
+                    url: rv.url
+                },
+            }
+            } catch (e) {
+              return {
+              status: false,
+              message: "males"
+           }
+       }
+    }
+
+//return fetchRandomVideo()
