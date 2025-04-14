@@ -2,6 +2,26 @@ import axios from "axios"
 import search from "yt-search"
 
 const Api = {
+  async mp3(query) {
+    try {
+       let kntl = axios.get(`https://api.siputzx.my.id/api/d/ytmp3?url=${query}`).then(d => d.data.data.dl)
+       return kntl
+    } catch (e) {
+      return {
+        status: false,
+        message: "males",
+      }
+  }
+  async mp4(query) {
+    try {
+       let kntl = axios.get(`https://api.siputzx.my.id/api/d/ytmp3?url=${query}`).then(d => d.data.data.dl)
+       return kntl
+    } catch (e) {
+      return {
+        status: false,
+        message: "males",
+      }
+    }
   async yts(query) {
     try {
       let res = await search(query)
