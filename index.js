@@ -12,16 +12,16 @@ const Api = {
         message: "males",
       }
   }
-  async mp4(query) {
+  /*async mp4(query) {
     try {
-       let kntl = axios.get(`https://api.siputzx.my.id/api/d/ytmp3?url=${query}`).then(d => d.data.data.dl)
-       return kntl
+       let kntll = axios.get(`https://api.siputzx.my.id/api/d/ytmp3?url=${query}`).then(d => d.data.data.dl)
+       return kntll
     } catch (e) {
       return {
         status: false,
         message: "males",
       }
-    }
+    }*/
   async yts(query) {
     try {
       let res = await search(query)
