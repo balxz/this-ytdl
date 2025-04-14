@@ -11,7 +11,7 @@ const Api = {
         status: false,
         message: "males",
       }
-  }
+  },
   /*async mp4(query) {
     try {
        let kntll = axios.get(`https://api.siputzx.my.id/api/d/ytmp3?url=${query}`).then(d => d.data.data.dl)
