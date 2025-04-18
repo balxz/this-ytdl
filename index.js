@@ -4,8 +4,8 @@ import search from "yt-search"
 const Api = {
   async ytmp3(query) {
     try {
-      let kntl = axios.get(`https://api.siputzx.my.id/api/d/ytmp3?url=${query}`).then(d => d.data.data.dl)
-      return kntl
+      const res = await axios.get(`https://api.siputzx.my.id/api/d/ytmp3?url=${query}`)
+      return res.data.data.dl
     } catch (e) {
       return {
         status: false,
@@ -14,10 +14,10 @@ const Api = {
     }
   },
   
-   async mp4(query) {
+  async mp4(query) {
     try {
-      let kntll = axios.get(`https://api.siputzx.my.id/api/d/ytmp4?url=${query}`).then(d => d.data.data.dl)
-      return kntll
+      const res = await axios.get(`https://api.siputzx.my.id/api/d/ytmp4?url=${query}`)
+      return res.data.data.dl
     } catch (e) {
       return {
         status: false,
@@ -28,26 +28,31 @@ const Api = {
   
   async yts(query) {
     try {
-      let res = await search(query)
-      let vi = res.videos
-      if (vi.length > 0) {
-        let ri = Math.floor(Math.random() * vi.length)
-        let rv = vi[ri]
+      const res = await search(query)
+      const videos = res.videos
+      if (videos.length > 0) {
+        const randomIndex = Math.floor(Math.random() * videos.length)
+        const video = videos[randomIndex]
         return {
           status: true,
           message: "Success",
           owner: "bálxzzy — SH",
           data: {
-            id: rv.videoId,
-            title: rv.title,
-            desc: rv.description,
-            imej: rv.image,
-            thumb: rv.thumbnail,
-            uploadTime: rv.ago,
-            views: rv.views,
-            author: rv.author.name,
-            url: rv.url,
+            id: video.videoId,
+            title: video.title,
+            desc: video.description,
+            imej: video.image,
+            thumb: video.thumbnail,
+            uploadTime: video.ago,
+            views: video.views,
+            author: video.author.name,
+            url: video.url,
           },
+        }
+      } else {
+        return {
+          status: false,
+          message: "No video found",
         }
       }
     } catch (e) {
