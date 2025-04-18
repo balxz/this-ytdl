@@ -14,9 +14,9 @@ const Api = {
     }
   },
   
-  /* async mp4(query) {
+   async mp4(query) {
     try {
-      let kntll = axios.get(`https://api.siputzx.my.id/api/d/ytmp3?url=${query}`).then(d => d.data.data.dl)
+      let kntll = axios.get(`https://api.siputzx.my.id/api/d/ytmp4?url=${query}`).then(d => d.data.data.dl)
       return kntll
     } catch (e) {
       return {
@@ -24,7 +24,7 @@ const Api = {
         message: "males",
       }
     }
-  }, */
+  }, 
   
   async yts(query) {
     try {
