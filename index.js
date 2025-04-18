@@ -14,7 +14,7 @@ const Api = {
     }
   },
   
-  async mp4(query) {
+  async ytmp4(query) {
     try {
       const res = await axios.get(`https://api.siputzx.my.id/api/d/ytmp4?url=${query}`)
       return res.data.data.dl
